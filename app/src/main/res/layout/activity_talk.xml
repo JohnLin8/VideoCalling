@@ -4,33 +4,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/test"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:text="开始接收对方数据"/>
-
-    <SurfaceView
-        android:id="@+id/texture"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
     <SurfaceView
         android:id="@+id/surface"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        />
+        android:layout_width="133dp"
+        android:layout_height="112dp"
+        android:layout_marginTop="20dp" />
 
 
     <com.lkl.opengl.MyGLSurfaceView
         android:id="@+id/glv"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"/>
+        android:layout_width="match_parent"
+        android:layout_height="274dp"
+        android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="btn"/>
+        android:text="旋转180" />
 </LinearLayout>

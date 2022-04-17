@@ -35,7 +35,7 @@ public class VideoTalkActivity extends Activity implements CameraManager.OnFrame
     //播放端
     private SurfaceView preview;
     //预览端
-    private SurfaceView playView;
+//    private SurfaceView playView;
     private MyGLSurfaceView mGLSurfaceView;
     CameraManager manager;
     //编码
@@ -67,7 +67,7 @@ public class VideoTalkActivity extends Activity implements CameraManager.OnFrame
         port = getIntent().getIntExtra("port", 7888);
         localPort = getIntent().getIntExtra("localPort", 7999);
         preview = (SurfaceView) findViewById(R.id.surface);
-        playView = (SurfaceView) findViewById(R.id.texture);
+//        playView = (SurfaceView) findViewById(R.id.texture);
         mGLSurfaceView = (MyGLSurfaceView) findViewById(R.id.glv);
         mGLSurfaceView.setYuvDataSize(Contants.WIDTH, Contants.HEIGHT);
         mDecodeManager = new YuvHardwareDecoder();
@@ -103,12 +103,12 @@ public class VideoTalkActivity extends Activity implements CameraManager.OnFrame
         manager = new CameraManager(preview);
         manager.setOnFrameCallback(VideoTalkActivity.this);
 
-        findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                isSend = !isSend;
-            }
-        });
+//        findViewById(R.id.test).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                isSend = !isSend;
+//            }
+//        });
 
     }
 
@@ -119,11 +119,11 @@ public class VideoTalkActivity extends Activity implements CameraManager.OnFrame
      */
     @Override
     public void onCameraFrame(byte[] data) {
-        if (isSend) {
+//        if (isSend) {
             //发送去编码
             LogUtils.d("222编码前" + data.length);
             mEncodeManager.onEncodeData(data);
-        }
+//        }
     }
 
 
